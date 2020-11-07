@@ -3,7 +3,7 @@
 The following is an example of how to setup CI (i.e., an Github Action) that is triggered any the Excel sheet containing SKOS vocabulary is updated:
 
 ```bash
-name: excel2rdf automatic conversion 
+name: Excel to RDF conversion
 
 on:
   push:
