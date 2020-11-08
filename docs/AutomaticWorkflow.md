@@ -1,18 +1,46 @@
 # Automatic Workflow
+Here we describe how you can automatize the workflow described in [Manual Workflow](../ManualWorkflow) page.
+
+We advise you to read this page and afterwards fork and update the following Github repository in accordance to your vocabulary:
+
+https://github.com/fair-data-collective/excel2rdf-template
+
+
+The above repository contains all necessary files and configuration to automatically convert and validate your Excel vocabularies.
+
 
 ## Structuring Gihtub repository
-
-Here we shortly describe how you ideally you should structure your Github repository which will be used for:
+Here we shortly describe how one could structure a Github repository which will be used for:
 
 - Maintaining (and version controlling)
 - Converting and
 - Validating your controlled vocabularies
 
-The example of a template Github repository that contains the automatized workflow can be found [here](https://github.com/fair-data-collective/excel2rdf-template).
+Here is an example of the Github repository structure, produced by running `tree` command on [excel2rdf-template]((https://github.com/fair-data-collective/excel2rdf-template)) repository:
+
+```bash
+├── .github
+│   └── workflows
+│       └── excel2rdf.yml
+├── LICENSE
+├── README.md
+├── logs
+│   ├── conversion.log
+│   └── validation.log
+├── vocabulary.ttl
+└── vocabulary.xlsx
+```
+
+The key parts of this structure are following files:
+- `vocabulary.xlsx` is the Excel template for building controlled vocabulary that will serve as input for `xls2rdf` tool
+- `vocabulary.ttl` is the resulting file generated when running `xls2rdf` on `vocabulary.xlsx`
+- `xls2rdf` produces logs that are saved in `conversion.log` file
+- `validation.log` contains logs that are produced when running `qSKOS` on `vocabulary.ttl` to validate the converted vocabulary
+- `excel2rdf.yml` contains configuration of Github action that automatize the workflow described in [Manual Workflow](../ManualWorkflow) page.
 
 ## Setting up Github actions
 
-The following is an example of how to setup CI (i.e., an Github Action) that is triggered any the Excel sheet containing SKOS vocabulary is updated:
+Considering that you opt for the above structure of your Github repository the following is an example of how to setup Github action via `excel2rdf.yml`:
 
 ```bash
 name: Excel to RDF conversion
@@ -55,3 +83,4 @@ jobs:
           git diff-index --quiet HEAD || git commit -m "generated new .ttl from .xlsx file"
           git push
 ```
+
