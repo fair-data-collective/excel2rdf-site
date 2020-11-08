@@ -31,6 +31,7 @@ The structure is as following:
 └── vocabulary.xlsx
 ```
 The most important files of this repository are:
+
 - `vocabulary.xlsx`, the Excel template for building controlled vocabulary that will serve as input for `xls2rdf` tool
 - `vocabulary.ttl`, the resulting file generated when running `xls2rdf` on `vocabulary.xlsx`
 - `conversion.log`, the file that stores logs of `xls2rdf` tool
@@ -86,15 +87,20 @@ jobs:
 ```
 
 The file `excel2rdf.yml` describes a single job named `convert-validate-deploy-vocabulary` consisting of following steps:
+
 - `prepare`:
+
     - which configures git on docker `ubuntu-latest` running on a virtual machine
     - downloads `xls2rdf` and `qSKOS` applications from their associtate Github repositories
 - `build`:
+
     - executes `xls2rdf` considering `vocabulary.xlsx` as its input, while producing `vocabulary.ttl` as the its output
     - moves and renames the log produced in this step to the folder `./logs/`
 - `validate`:
+
     - runs `qSKOS` on the produced `vocabulary.ttl` and stores the resulting log to to the folder `./logs/`
 - `deploy`:
+
     - removes `qSKOS` and `xls2rdf` from the clone repository
     - adds and commits changes of the clone repository
     - pushes the commits to Github
