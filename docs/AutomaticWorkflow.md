@@ -1,15 +1,15 @@
 # Automatic Workflow
+
 Here we describe how you can automatize the workflow described in [Manual Workflow](../ManualWorkflow) page.
 
 We advise you to read this page and afterwards fork and update the following Github repository in accordance to your project needs:
 
-https://github.com/fair-data-collective/excel2rdf-template
-
+[https://github.com/fair-data-collective/excel2rdf-template](https://github.com/fair-data-collective/excel2rdf-template)
 
 The above repository contains all necessary files and configuration to automatically convert and validate your Excel vocabularies.
 
-
 ## Structuring Gihtub repository
+
 Here we shortly describe the structure of [excel2rdf-template](https://github.com/fair-data-collective/excel2rdf-template) repository which can be used for:
 
 - Maintaining (and version controlling)
@@ -30,6 +30,7 @@ The structure is as following:
 ├── vocabulary.ttl
 └── vocabulary.xlsx
 ```
+
 The most important files of this repository are:
 
 - `vocabulary.xlsx`, the Excel template for building controlled vocabulary that will serve as input for `xls2rdf` tool
@@ -90,17 +91,20 @@ The file `excel2rdf.yml` describes a single job named `convert-validate-deploy-v
 
 - `prepare`:
 
-    - which configures git on docker `ubuntu-latest` running on a virtual machine
-    - downloads `xls2rdf` and `qSKOS` applications from their associtate Github repositories
+  - which configures git on docker `ubuntu-latest` running on a virtual machine
+  - downloads `xls2rdf` and `qSKOS` applications from their associtate Github repositories
+
 - `build`:
 
-    - executes `xls2rdf` considering `vocabulary.xlsx` as its input, while producing `vocabulary.ttl` as the its output
-    - moves and renames the log produced in this step to the folder `./logs/`
+  - executes `xls2rdf` considering `vocabulary.xlsx` as its input, while producing `vocabulary.ttl` as the its output
+  - moves and renames the log produced in this step to the folder `./logs/`
+
 - `validate`:
 
-    - runs `qSKOS` on the produced `vocabulary.ttl` and stores the resulting log to to the folder `./logs/`
+  - runs `qSKOS` on the produced `vocabulary.ttl` and stores the resulting log to to the folder `./logs/`
+
 - `deploy`:
 
-    - removes `qSKOS` and `xls2rdf` from the clone repository
-    - adds and commits changes of the clone repository
-    - pushes the commits to Github
+  - removes `qSKOS` and `xls2rdf` from the clone repository
+  - adds and commits changes of the clone repository
+  - pushes the commits to Github
