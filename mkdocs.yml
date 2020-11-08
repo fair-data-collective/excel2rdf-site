@@ -2,7 +2,7 @@ site_name: Turning a vocabulary into a ontology resource
 nav:
     - Introduction: Introduction.md
     - Manual Workflow: ManualWorkflow.md
-    - Workflow: Workflow.md
+    - Automatic Workflow: AutomaticWorkflow.md
     - Tools: Tools.md
     - Examples: Examples.md
     - Authors: Authors.md
