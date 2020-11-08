@@ -6,4 +6,4 @@ This documment has been proudly brought to you by the FAIR Data Collective!
 ![](./assets/img/FDC_logo.png)
 
 
-*This web site source files and `readthedocs` configuration can be found on [Github](https://github.com/fair-data-collective/excel2rdf).*
+*This web site source files and `readthedocs` configuration can be found on [Github](https://github.com/fair-data-collective/excel2rdf-site).*
