@@ -56,10 +56,14 @@ You can verify your terms are visible to the public by visiting the Classes tab 
  
 ## Making Private Ontology Externally Accessible
 
-If you want your ontology to be visible to an external system (like the [CEDAR Workbench](https://metadatacenter.org),) 
+If you want your ontology to be visible to an external system (like the [CEDAR Workbench](https://metadatacenter.org)),
 and your ontology Viewing Restrictions field is set to Private,
 you will have to explicitly give your external application or user permissions to access it with their own API key or account. 
 To do so for the CEDAR Workbench, enter `cedar`, `cedar-mjd`, `cedar-test`, and `cedar-public` in the Viewing Restrictions field for those accounts.
 It takes as many as 7 hours for the ontology to be detected in CEDAR once it is published by BioPortal.
+
+## Automation
+
+To automate this set of processes, please see the [Workflow](../Workflow) page.
 
 
