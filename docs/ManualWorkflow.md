@@ -53,10 +53,13 @@ When you submit your ontology, be sure to select the SKOS option for ontology ty
 The ontology will still parse if the OWL format is selected, but will not show the SKOS concepts as classes on the BioPortal site,
 so they will not be visible.
 You can verify your terms are visible to the public by visiting the Classes tab and viewing the tree that's shown in that tab.
+ 
+## Making Private Ontology Externally Accessible
 
-If you want your ontology to be visible to the CEDAR system, and your ontology Viewing Restrictions field is set to private,
-you will have to explicitly give CEDAR permissions to access it. 
-To do so, enter `cedar`, `cedar-mjd`, `cedar-test`, and `cedar-public` in the Viewing Restrictions field for those accounts.
+If you want your ontology to be visible to an external system (like the [CEDAR Workbench](https://metadatacenter.org),) 
+and your ontology Viewing Restrictions field is set to Private,
+you will have to explicitly give your external application or user permissions to access it with their own API key or account. 
+To do so for the CEDAR Workbench, enter `cedar`, `cedar-mjd`, `cedar-test`, and `cedar-public` in the Viewing Restrictions field for those accounts.
 It takes as many as 7 hours for the ontology to be detected in CEDAR once it is published by BioPortal.
 
 
