@@ -46,7 +46,7 @@ In accordance to the above structure we set up the Github action via `excel2rdf.
 The content of `excel2rdf.yml` file looks like this
 
 ```bash
-name: Excel to RDF conversion
+name: excel2rdf
 
 on:
   push:
