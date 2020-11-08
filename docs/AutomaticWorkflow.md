@@ -1,4 +1,16 @@
-# Workflow
+# Automatic Workflow
+
+## Structuring Gihtub repository
+
+Here we shortly describe how you ideally you should structure your Github repository which will be used for:
+
+- Maintaining (and version controlling)
+- Converting and
+- Validating your controlled vocabularies
+
+The example of a template Github repository that contains the automatized workflow can be found [here](https://github.com/fair-data-collective/excel2rdf-template).
+
+## Setting up Github actions
 
 The following is an example of how to setup CI (i.e., an Github Action) that is triggered any the Excel sheet containing SKOS vocabulary is updated:
 
@@ -31,11 +43,11 @@ jobs:
           java -jar xls2rdf.jar convert -i ./ontology/vocabulary.xlsx -o ./ontology/vocabulary.ttl -l en
           mv xls2rdf.log ./ontology/logs/
 
-      - name: test # tests vocabulary.ttl against set of qSKOS tests 
+      - name: test # tests vocabulary.ttl against set of qSKOS tests
         run: |
           java -jar qSKOS.jar analyze -dc mil,bl ./ontology/vocabulary.ttl -o ./ontology/logs/qSKOS.log
 
-      - name: deploy # comitts changes to the repository 
+      - name: deploy # comitts changes to the repository
         run: |
           rm qSKOS.jar
           rm xls2rdf.jar
