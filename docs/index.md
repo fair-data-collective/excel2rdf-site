@@ -1,3 +1,3 @@
-This documment has be proudly brought to you by FAIR Data Collective!
+This documment has been proudly brought to you by the FAIR Data Collective!
 
 ![](./assets/img/FDC_logo.png)
