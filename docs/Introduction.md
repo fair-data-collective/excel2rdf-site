@@ -10,12 +10,12 @@ The SKOS format is compatible with the required SKOS format for BioPortal and On
 making it easy to access your terms through those systems and through the [CEDAR Workbench](https://metadatacenter.org) metadata system.
 
 We use the following tools to manage this conversion:
-  * Excel spreadsheets
-  * GitHub with Travis
-  * SKOS Play
-  * .. (verification)
-  * BioPortal
-Click on the [Tools](../Tools] link to learn more about the items in this list.
+ - Excel spreadsheets
+ - GitHub with Travis
+ - SKOS Play (web site or downloaded service)
+ - .. (verification)
+ - BioPortal
+Click on the [Tools](../Tools) link to learn more about the items in this list.
 
 You don't have to have GitHub to use the manual version of this workflow. 
 However, the Workflow for this transition, once set up on GitHub, is automated through GitHub's Travis software. 
