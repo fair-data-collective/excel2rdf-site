@@ -18,7 +18,7 @@ Instructions for automating the process are described in [Automatic Workflow](./
 
 The core of the transformation is engineered by software from [SKOS Play](https://labs.sparna.fr/skos-play/),
 and in particular its [xls2rdf](https://labs.sparna.fr/skos-play/convert), which converts Excel sheets to SKOS lexicalized RDF files (e.g., in [Turtle format](<https://en.wikipedia.org/wiki/Turtle_(syntax)>).
-Developer Thomas Francart of Sparna Labs developed this sophisticated tool
+Developer [Thomas Francart](https://github.com/tfrancart) of Sparna Labs developed this sophisticated tool
 to address a wide range of vocabulary representation and needs,
 and it is available both as a web service (described here) and an installable app file (see [Automatic Workflow](./AutomaticWorkflow.md) page).
 
