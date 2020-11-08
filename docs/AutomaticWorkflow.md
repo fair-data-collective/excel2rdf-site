@@ -90,6 +90,9 @@ jobs:
 The file `excel2rdf.yml` describes a single job named `convert-validate-deploy-vocabulary` consisting of following steps:
 
 - `prepare`: which configures git on docker `ubuntu-latest` running on a virtual machine and downloads `xls2rdf` and `qSKOS` applications from their associated Github repositories
+
 - `build`: executes `xls2rdf` considering `vocabulary.xlsx` as its input, while producing `vocabulary.ttl` as the its output, and moves and renames the log produced in this step to the folder `./logs/`
+
 - `validate`: runs `qSKOS` on the produced `vocabulary.ttl` and stores the resulting log to to the folder `./logs/`
+
 - `deploy`: removes `qSKOS` and `xls2rdf` from the clone repository, adds and commits changes of the clone repository, pushes the commits to Github
