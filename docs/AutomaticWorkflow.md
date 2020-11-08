@@ -1,7 +1,7 @@
 # Automatic Workflow
 Here we describe how you can automatize the workflow described in [Manual Workflow](../ManualWorkflow) page.
 
-We advise you to read this page and afterwards fork and update the following Github repository in accordance to your vocabulary:
+We advise you to read this page and afterwards fork and update the following Github repository in accordance to your project needs:
 
 https://github.com/fair-data-collective/excel2rdf-template
 
@@ -31,11 +31,11 @@ The structure is as following:
 └── vocabulary.xlsx
 ```
 The most important files of this repository are:
-- `vocabulary.xlsx` is the Excel template for building controlled vocabulary that will serve as input for `xls2rdf` tool
-- `vocabulary.ttl` is the resulting file generated when running `xls2rdf` on `vocabulary.xlsx`
-- `xls2rdf` produces logs that are saved in `conversion.log` file
-- `validation.log` contains logs that are produced when running `qSKOS` on `vocabulary.ttl` to validate the converted vocabulary
-- `excel2rdf.yml` contains configuration of Github action that automatize the workflow described in [Manual Workflow](../ManualWorkflow) page.
+- `vocabulary.xlsx`, the Excel template for building controlled vocabulary that will serve as input for `xls2rdf` tool
+- `vocabulary.ttl`, the resulting file generated when running `xls2rdf` on `vocabulary.xlsx`
+- `conversion.log`, the file that stores logs of `xls2rdf` tool
+- `validation.log`, the file that stores logs produced when running `qSKOS` on `vocabulary.ttl` to validate the converted vocabulary
+- `excel2rdf.yml`, the Github action configuration file that automatize the workflow described in [Manual Workflow](../ManualWorkflow) page.
 
 ## Setting up Github actions
 
@@ -97,4 +97,4 @@ The file `excel2rdf.yml` describes a single job named `convert-validate-deploy-v
 - `deploy`:
     - removes `qSKOS` and `xls2rdf` from the clone repository
     - adds and commits changes of the clone repository
-    - pushes the commits to Github 
+    - pushes the commits to Github
