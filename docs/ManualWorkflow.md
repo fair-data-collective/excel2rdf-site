@@ -17,13 +17,13 @@ Instructions for automating the process are described in [Automatic Workflow](./
 ## Choosing your template
 
 The core of the transformation is engineered by software from [SKOS Play](https://labs.sparna.fr/skos-play/),
-and in particular its [xls2rdf](https://labs.sparna.fr/skos-play/convert), which converts Excel sheets to SKOS-based RDF files in [Turtle representation](<https://en.wikipedia.org/wiki/Turtle_(syntax)>).
+and in particular its [xls2rdf](https://labs.sparna.fr/skos-play/convert), which converts Excel sheets to SKOS lexicalized RDF files (e.g., in [Turtle format](<https://en.wikipedia.org/wiki/Turtle_(syntax)>).
 Developer Thomas Francart of Sparna Labs developed this sophisticated tool
 to address a wide range of vocabulary representation and needs,
 and it is available both as a web service (described here) and an installable app file (see [Automatic Workflow](./AutomaticWorkflow.md) page).
 
 To begin, the user needs to choose an appropriate spreadsheet for representing their vocabularies.
-There are 8 examples on the SKOS Play web site, each illustrating different features of the system.
+There are 8 examples on [the SKOS Play web site](https://labs.sparna.fr/skos-play/convert#excel-file-structure), each illustrating different features of the system.
 Examples 4 and 7 are not intended to produce rigorous SKOS outputs, and can be ignored.
 
 We also provide spreadsheet examples in this repository, addressing typical scenarios.
@@ -66,4 +66,4 @@ It takes as many as 7 hours for the ontology to be detected in CEDAR once it is 
 
 ## Automation
 
-To automate this set of processes, please see the [Workflow](../Workflow) page.
+To automate this set of processes, please see the [Automatic Workflow](./AutomaticWorkflow.md) page.
