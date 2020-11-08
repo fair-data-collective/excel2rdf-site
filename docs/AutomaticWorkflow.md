@@ -10,13 +10,13 @@ The above repository contains all necessary files and configuration to automatic
 
 
 ## Structuring Gihtub repository
-Here we shortly describe how one could structure a Github repository which will be used for:
+Here we shortly describe the structure of [excel2rdf-template](https://github.com/fair-data-collective/excel2rdf-template) repository which can be used for:
 
 - Maintaining (and version controlling)
 - Converting and
-- Validating your controlled vocabularies
+- Validating your Excel controlled vocabularies
 
-Here is an example of the Github repository structure, produced by running `tree` command on [excel2rdf-template]((https://github.com/fair-data-collective/excel2rdf-template)) repository:
+The structure is as following:
 
 ```bash
 ├── .github
@@ -30,8 +30,7 @@ Here is an example of the Github repository structure, produced by running `tree
 ├── vocabulary.ttl
 └── vocabulary.xlsx
 ```
-
-The key parts of this structure are following files:
+The most important files of this repository are:
 - `vocabulary.xlsx` is the Excel template for building controlled vocabulary that will serve as input for `xls2rdf` tool
 - `vocabulary.ttl` is the resulting file generated when running `xls2rdf` on `vocabulary.xlsx`
 - `xls2rdf` produces logs that are saved in `conversion.log` file
@@ -40,7 +39,9 @@ The key parts of this structure are following files:
 
 ## Setting up Github actions
 
-Considering that you opt for the above structure of your Github repository the following is an example of how to setup Github action via `excel2rdf.yml`:
+In accordance to the above structure we set up the Github action via `excel2rdf.yml`, which is placed in `.github/workflows/` folder (it must be there for Github to automatically picks it up and execute it).
+
+The content of `excel2rdf.yml` file looks like this
 
 ```bash
 name: Excel to RDF conversion
@@ -68,14 +69,14 @@ jobs:
 
       - name: build # converts vocabulary.xlsx to vocabulary.ttl
         run: |
-          java -jar xls2rdf.jar convert -i ./ontology/vocabulary.xlsx -o ./ontology/vocabulary.ttl -l en
-          mv xls2rdf.log ./ontology/logs/
+          java -jar xls2rdf.jar convert -i ./vocabulary.xlsx -o ./vocabulary.ttl -l en
+          mv xls2rdf.log ./logs/conversion.log
 
       - name: test # tests vocabulary.ttl against set of qSKOS tests
         run: |
-          java -jar qSKOS.jar analyze -dc mil,bl ./ontology/vocabulary.ttl -o ./ontology/logs/qSKOS.log
+          java -jar qSKOS.jar analyze -dc mil,bl ./vocabulary.ttl -o ./logs/validation.log
 
-      - name: deploy # comitts changes to the repository
+      - name: deploy # commits changes to the repository
         run: |
           rm qSKOS.jar
           rm xls2rdf.jar
