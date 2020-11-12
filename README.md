@@ -8,5 +8,5 @@ This repository contains source files and the `readthedocs` configuration for ma
 
 The above online resource describes a simple workflow and associated tools for converting Excel sheets to machine-actionable SKOS-based controlled vocabularies that can be uploaded to for example:
 
-- [BioPortal](http://bioportal.bioontology.org/) and used in [CEDAR](cedar.metadatacenter.org/) templates
+- [BioPortal](http://bioportal.bioontology.org/) suitable for use in [CEDAR](https://metadatacenter.org/) templates
 - [Jena Fuseki](https://jena.apache.org/documentation/fuseki2/) graph database to be served using [SKOSMOS](http://www.skosmos.org/)
