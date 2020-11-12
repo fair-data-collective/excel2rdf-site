@@ -11,7 +11,7 @@ this tool suite makes it easy to produce and distribute advanced semantic conten
 The SKOS format is compatible with the required SKOS format for BioPortal and OntoPortal repositories,
 making it easy to access your terms through those systems and through the [CEDAR Workbench](https://metadatacenter.org) metadata system.
 
-We use the following tools to manage this conversion. (Only the first two are required for simple [manual conversions](../ManualWorkflow).)
+We use the following tools to manage this conversion. (Only the first two are required for a simple [manual conversions](../ManualWorkflow).)
 
 - Excel spreadsheets
 - [SKOS Play Convert](https://labs.sparna.fr/skos-play/convert) (available at web site or as downloaded service)
