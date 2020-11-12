@@ -55,7 +55,7 @@ The SKOS PLAY conversion infers that a term is at the top level of the class tre
 and issues the appropriate RDF triples to make that clear in the resulting ontology.
 This approach lets you manage a number of different term lists within the same overarching ontology.
 
-## Converting your file to SKOS: SKOS Play
+## Converting your file to SKOS using SKOS Play
 
 Once you have chosen your desired template, you can edit its content,
 then submit it to the [SKOS Play site for conversion](https://labs.sparna.fr/skos-play/convert).
