@@ -44,6 +44,10 @@ and offers support for SKOS files that are formatted to follow some [good practi
 This allows BioPortal to recognize and present the SKOS individuals as classes in its class tree,
 so users can see and select the terms.
 
+BioPortal can be configured to upload an ontology file from a URL whenever it changes. 
+(The change detection takes place nightly.) 
+Scripts could also be configured to push the file whenever it changes to BioPortal's submission API, but we have not implemented this.
+
 The Working Example linked above has been submitted to BioPortal as the [ZONMW-ADMIN-MD ontology](http://bioportal.bioontology.org/ontologies/ZONMW-ADMIN-MD).
 Click on the [Classes tab](http://bioportal.bioontology.org/ontologies/ZONMW-ADMIN-MD/?p=classes&conceptid=root) to see the terms.
 
