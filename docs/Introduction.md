@@ -14,9 +14,9 @@ making it easy to access your terms through those systems and through the [CEDAR
 We use the following tools to manage this conversion. (Only the first two are required for simple [manual conversions](../ManualWorkflow).)
 
 - Excel spreadsheets
-- [SKOS Play Convert](https://labs.sparna.fr/skos-play/convert) (web site or downloaded service)
+- [SKOS Play Convert](https://labs.sparna.fr/skos-play/convert) (available at web site or as downloaded service)
 - [qSKOS](https://github.com/cmader/qSKOS) (for RDF verification)
-- [BioPortal](https://bioportal.bioontology.org/, web site at https://bioontology.org)
+- [BioPortal](https://bioportal.bioontology.org/), web site at https://bioontology.org
 - [GitHub Actions](https://github.com/features/actions) for workflow automatization
 
 Click on the [Tools](../Tools) link to learn more about the items in this list.
