@@ -2,13 +2,13 @@
 
 Here we describe how you can automatize the workflow described in [Manual Workflow](../ManualWorkflow) page.
 
-The provided description make use of the following Github repository:
+The provided description makes use of the following Github repository:
 
 [https://github.com/fair-data-collective/excel2rdf-template](https://github.com/fair-data-collective/excel2rdf-template)
 
 which contains all necessary files and Github configuration to automatically convert and validate your Excel vocabularies.
 
-Once familiar with the process, simply fork the above repository and update in accordance to your project needs.
+Once familiar with the process, simply fork the above repository and update it per your project needs.
 
 ## Structuring Gihtub repository
 
@@ -18,7 +18,7 @@ Here we shortly describe the structure of [excel2rdf-template](https://github.co
 - Converting and
 - Validating your Excel controlled vocabularies
 
-The structure is as following:
+The structure is as follows:
 
 ```bash
 ├── .github
@@ -35,15 +35,15 @@ The structure is as following:
 
 The most important files of this repository are:
 
-- `vocabulary.xlsx`, the Excel template for building controlled vocabulary that will serve as input for `xls2rdf` tool
+- `vocabulary.xlsx`, the Excel template for building a controlled vocabulary that will serve as input for `xls2rdf` tool
 - `vocabulary.ttl`, the resulting file generated when running `xls2rdf` on `vocabulary.xlsx`
 - `conversion.log`, the file that stores logs of `xls2rdf` tool
 - `validation.log`, the file that stores logs produced when running `qSKOS` on `vocabulary.ttl` to validate the converted vocabulary
-- `excel2rdf.yml`, the Github action configuration file that automatize the workflow described in [Manual Workflow](../ManualWorkflow) page.
+- `excel2rdf.yml`, the Github action configuration file that automatizes the workflow described in [Manual Workflow](../ManualWorkflow) page.
 
 ## Setting up Github actions
 
-In accordance to the above structure we set up the Github action via `excel2rdf.yml`, which is placed in `.github/workflows/` folder (it must be there for Github to automatically picks it up and execute it).
+Following the above structure, we set up the Github action via `excel2rdf.yml`, which is placed in `.github/workflows/` folder (it must be there for Github to automatically picks it up and execute it).
 
 The content of `excel2rdf.yml` file looks like this
 
@@ -89,12 +89,12 @@ jobs:
           git push
 ```
 
-The file `excel2rdf.yml` describes a single job named `convert-validate-deploy-vocabulary` consisting of following steps:
+The file `excel2rdf.yml` describes a single job named `convert-validate-deploy-vocabulary` consisting of the following steps:
 
 - `prepare`: which configures git on docker `ubuntu-latest` running on a virtual machine and downloads `xls2rdf` and `qSKOS` applications from their associated Github repositories
 
-- `build`: executes `xls2rdf` considering `vocabulary.xlsx` as its input, while producing `vocabulary.ttl` as the its output, and moves and renames the log produced in this step to the folder `./logs/`
+- `build`: executes `xls2rdf` considering `vocabulary.xlsx` as its input, while producing `vocabulary.ttl` as its output, and moves and renames the log produced in this step to the folder `./logs/`
 
-- `validate`: runs `qSKOS` on the produced `vocabulary.ttl` and stores the resulting log to to the folder `./logs/`
+- `validate`: runs `qSKOS` on the produced `vocabulary.ttl` and stores the resulting log to the folder `./logs/`
 
-- `deploy`: removes `qSKOS` and `xls2rdf` from the clone repository, adds and commits changes of the clone repository, pushes the commits to Github
+- `deploy`: removes `qSKOS` and `xls2rdf` from the cloned repository, adds and commits changes of the cloned repository, pushes the commits to Github
