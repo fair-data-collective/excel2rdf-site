@@ -95,8 +95,15 @@ but you want the ontology to be visible to an external system (like the [CEDAR W
 you must explicitly give your external application or user permission to access the ontology using their own account's API key.
 To do so for the CEDAR Workbench tool, enter `cedar`, `cedar-mjd`, `cedar-test`, and `cedar-public` in the Viewing Restrictions field for those accounts.
 
-To validate that the classes are visible to CEDAR, use the command `https://data.bioontology.org/ONT_ACRONYM/classes`,
-replacing ONT_ACRONYM with your ontology acronym (and adding '?apikey=" and your API key, if you haven't done so before).
+To validate that the classes are visible to CEDAR, use the command:
+```
+https://data.bioontology.org/ONT_ACRONYM/classes
+```
+replacing `ONT_ACRONYM` with your ontology acronym. Potentially add your API key to the call if you haven't done that so before (replace `YOUR_API_KEY` with your API key):
+```
+https://data.bioontology.org/ONT_ACRONYM/classes?apikey=YOUR_API_KEY
+```
+
 You should see the terms of your ontology within the JSON response.
 
 It takes as many as 7 hours for the ontology to be detected in CEDAR once it is published by BioPortal.
