@@ -1,6 +1,6 @@
 # Examples
 
-An exammple of a GitHub repository where this is in use is the [ZonMW Project Admin repo](https://github.com/fair-data-collective/zonmw-project-admin), 
+An example of a GitHub repository where this is in use is the [ZonMW Project Admin repo](https://github.com/fair-data-collective/zonmw-project-admin), 
 which manages an administrative vocabulary used in a GO FAIR COVID Training workshop. You can also visit the [BioPortal-registered SKOS ontology that results](http://bioportal.bioontology.org/ontologies/ZONMW-ADMIN-MD/?p=classes&conceptid=root).
 
 The template for this service can be forked from the [Excel2RDF template repo](https://github.com/fair-data-collective/excel2rdf-template).
