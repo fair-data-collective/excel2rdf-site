@@ -8,13 +8,15 @@ These are the tools (linked to their respective sites) that are involved in the 
 - [GitHub actions](https://github.com/features/actions)
 
 Each are briefly explained in their sections below.  You may also want to look at these templates:
-- Example 2 from SKOS PLay Convert
+- Example 2 from SKOS Play Convert: use the drop-down menu to choose one of the example files.
 - [Enhanced Template based on SKOS Play](https://github.com/fair-data-collective/excel2rdf-template/blob/main/vocabulary.xlsx): example #2 from SKOS Play Convert with enhanced metadata
 - [Working Example](https://github.com/fair-data-collective/zonmw-project-admin/tree/main/ontology): This directory contains both the XML source, and the Turtle-formatted SKOS ontology that resulted. 
 
-If you are working a lot with SKOS and vocabularies, please visit the other templates in SKOS Play for nice Excel-based solutions to some tricky vocabulary maintenance tasks.
+If you are working a lot with SKOS and vocabularies, please visit the other example templates in SKOS Play Convert 
+(using the drop-down menu to select the different examples) for nice Excel-based solutions to some tricky vocabulary maintenance tasks.
 
 ## Excel
+
 I don't need to tell you about Excel, do I?  This process uses just plain vanilla Excel, though
 you can dress up your own template however you want to make it easier to maintain.
 
