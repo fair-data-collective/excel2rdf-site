@@ -5,7 +5,7 @@ Click on [Introduction](Introduction) to learn more.
 
 This document has been proudly brought to you by the FAIR Data Collective!
 
-![](./assets/img/FDC_logo.png)
+<img src="./assets/img/FDC_logo.png" width="60%">
 
 
 *This web site source files and `readthedocs` configuration can be found on [Github](https://github.com/fair-data-collective/excel2rdf-site).*
